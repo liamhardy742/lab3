@@ -1,7 +1,24 @@
 import java.util.ArrayList;
 import java.util.List;
 
-interface StringChecker { boolean checkString(String s); }
+interface StringChecker { 
+    boolean checkString(String s);
+}
+
+class StringCheckerClass implements StringChecker {
+    public String keyString;
+
+    public StringCheckerClass(String key) {
+        this.keyString = key;
+    }
+
+    public boolean checkString(String s) {
+        if (s.contains(keyString)) {
+            return true;
+        }
+        return false;
+    }
+}
 
 class ListExamples {
 
